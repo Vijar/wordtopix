@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=0, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<title>Flux</title>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<header id="header-region"></header>
+	<main id="main-region">
+<div id="panel-wrapper">
+	<div id="settings-panel" class="swipe-panel">
+	</div>
+	<div id="home-panel" class="swipe-panel" style="width:100%;background-color:pink">
+		<div class="red sub" style="height:100px;width:100px;background-color:red"></div>
+		<div class="blue" style="height:100px;width:100px;background-color:blue"></div>
+		<div class="yellow" style="height:100px;width:100px;background-color:yellow"></div>
+	</div>
+	<div id="details-panel" class="swipe-panel">
+	</div>
+</div>
+
+
+
+
+	</main>
+	<!-- // <script data-main="/scripts/main" src="/scripts/bower_components/rjs/require.js"></script> -->
+	<script src="scripts/bower_components/jquery/dist/jquery.js"></script>
+	<script src="scripts/bower_components/hammerjs/hammer.js"></script>
+	<script src="scripts/bower_components/jquery-hammerjs/jquery.hammer.js"></script>
+	<script>
+ 	$('#home-panel').hammer().on("drag", function(ev) {
+ 		ev.gesture.preventDefault();
+
+ 		// console.log(event.gesture);
+ 		// console.log($(this).next());
+
+ 		// $(this).closest('swipe-panel');
+        // alert('la');
+        // console.log(event.gesture.direction);
+    });
+
+	function getDimensions() {
+
+	}
+		// $('.red').hammer().on('tap', function(event){
+		// 	alert('touched');
+		// });
+	</script>
+</body>
+</html>
